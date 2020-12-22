@@ -1,13 +1,14 @@
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <h1>
+          react-todo-list
+        </h1>
+        <textarea id="list"></textarea>
         <p>
-          Testing 1,2,3
+        <button>Add to List</button>
         </p>
-      </header>
     </div>
   );
 }
-
 export default App;
