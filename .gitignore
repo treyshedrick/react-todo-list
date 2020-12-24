@@ -21,6 +21,9 @@
 /package-lock.json
 /package.json
 
+# ignore practice files
+/src/components/Practice.js
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
