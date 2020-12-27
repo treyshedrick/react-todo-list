@@ -23,6 +23,7 @@
 
 # ignore practice files
 /src/components/Practice.js
+/src/components/Practice2.js
 
 npm-debug.log*
 yarn-debug.log*

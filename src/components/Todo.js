@@ -6,12 +6,13 @@ const Todo= () => {
     const [item, itemCounter] = useState([]);
     
     let itemCount = () =>{
-        itemCounter(listitems => [...listitems, "Test"])
+        let listKey = `listKey${count.toString()}`
+        itemCounter(listitems => [...listitems, {itemTodo: "This", id: listKey}])
         currentCount(count + 1);
     }
     return(
         <div>
-            {item.map((x => <List item={x} key={Math.random()}/>
+            {item.map((x => <List item={x.itemTodo} key={x.id}/>
             ))}
             <textarea id="userInput"></textarea>
             <p>
