@@ -1,7 +1,7 @@
 const List = (props) => {
     return(
         <div>
-        <h1>{props.item}</h1>
+        <li>{props.item}</li>
         </div>
     );
 }
