@@ -18,12 +18,12 @@ const Todo= () => {
     }
     return(
         <div>
-            <ul>
+            <div className="fullList">
             {item.map((x => <List item={x.itemTodo} key={x.id}/>
             ))}
-            </ul>
+            </div>
             <form onSubmit={itemCount}>
-            <textarea id="userInput" onChange={indivItem} required></textarea>
+            <input type="text" id="userInput" onChange={indivItem} required></input>
             <p>
             <button type="Submit">Add Item</button>
             </p>
