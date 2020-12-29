@@ -1,7 +1,16 @@
+import React, { useState } from 'react';
+
 const List = (props) => {
+    const[completed, completedFunc] = useState(false);
+
+    let checkedOrUnchecked = (event) => {
+        event.target.checked ? completedFunc(true): completedFunc(false)
+    }
+
     return(
-        <div>
-        <li>{props.item}</li>
+        <div className="listitem">
+        <input id="check" type="checkbox" onChange={checkedOrUnchecked}></input>
+        <label htmlFor="check" className={completed ? "strikethrough" : ""}>{props.item}</label>
         </div>
     );
 }
