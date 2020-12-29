@@ -10,19 +10,23 @@ body
     margin-top: 100px;
     padding: 10px;
     background:white;
-    min-height: 70vh;
+    min-height: 50vh;
     width: 300px;
     border-radius: 20px;
     border-style: solid;
 }
-ul
+.fullList
 {
     min-height: 40vh;
-    width: 80%;
     text-align: left;
 }
-li
+.listitem
 {
     font-size: 17px;
     padding: 3px;
+}
+.strikethrough
+{
+    text-decoration: line-through;
+    font-size: smaller;
 }
