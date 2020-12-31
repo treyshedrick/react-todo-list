@@ -22,11 +22,16 @@ body
 }
 .listitem
 {
-    font-size: 17px;
+    font-size: 18px;
     padding: 3px;
 }
 .strikethrough
 {
     text-decoration: line-through;
     font-size: smaller;
+    color:rgb(18, 82, 102);
+}
+label
+{
+    margin-left: 10px;
 }
