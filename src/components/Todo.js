@@ -17,10 +17,16 @@ const Todo= () => {
         event.preventDefault();
         event.target.reset();
     }
+
+    let deleteItem = itemKey =>{
+        itemCounter(item.filter(item => item.id !== itemKey.target.value))
+        currentCount(count - 1);
+    }
+
     return(
         <div>
             <div className="fullList">
-            {item.map((x => <List item={x.itemTodo} key={x.id}/>
+            {item.map((x => <List item={x.itemTodo} key={x.id} delete={deleteItem} value={x.id}/>
             ))}
             </div>
             <form onSubmit={itemCount}>

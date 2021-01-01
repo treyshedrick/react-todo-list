@@ -11,6 +11,7 @@ const List = (props) => {
         <div className="listitem">
         <input id="check" type="checkbox" onChange={checkedOrUnchecked}></input>
         <label htmlFor="check" className={completed ? "strikethrough" : ""}>{props.item}</label>
+        <button onClick={props.delete} value={props.value}>Delete</button>
         </div>
     );
 }
