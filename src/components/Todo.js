@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const Todo= () => {
     const [count, currentCount] = useState(0);
     const [individualItem, newItem] = useState("");
-    const [item, itemCounter] = useState([]);
+    const [items, itemCounter] = useState([]);
     
     const indivItem = i => {
         newItem(i.target.value);
@@ -19,14 +19,14 @@ const Todo= () => {
     }
 
     let deleteItem = itemKey =>{
-        itemCounter(item.filter(item => item.id !== itemKey.target.value))
+        itemCounter(items.filter(item => item.id !== itemKey.target.value))
         currentCount(count - 1);
     }
 
     return(
         <div>
             <div className="fullList">
-            {item.map((x => <List item={x.itemTodo} key={x.id} delete={deleteItem} value={x.id}/>
+            {items.map((x => <List item={x.itemTodo} key={x.id} delete={deleteItem} value={x.id}/>
             ))}
             </div>
             <form onSubmit={itemCount}>
