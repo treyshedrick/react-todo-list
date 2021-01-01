@@ -15,6 +15,7 @@ const Todo= () => {
         itemCounter(listitems => [...listitems, {itemTodo: individualItem, id: listKey}])
         currentCount(count + 1);
         event.preventDefault();
+        event.target.reset();
     }
     return(
         <div>
