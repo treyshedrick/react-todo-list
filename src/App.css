@@ -11,7 +11,7 @@ body
     padding: 10px;
     background:white;
     min-height: 50vh;
-    width: 300px;
+    max-width: 450px;
     border-radius: 20px;
     border-style: solid;
 }
@@ -22,8 +22,8 @@ body
 }
 .listitem
 {
-    font-size: 18px;
-    padding: 3px;
+    font-size: 15px;
+    margin-top: 6px;
 }
 .strikethrough
 {
@@ -31,7 +31,12 @@ body
     font-size: smaller;
     color:rgb(18, 82, 102);
 }
-label
+.btn-sm
 {
-    margin-left: 10px;
+    font-size: 9px;
+}
+.btn-md
+{
+    font-size: 13px;
+    margin-top: 10px;
 }
