@@ -25,14 +25,14 @@ const Todo= () => {
 
     return(
         <div>
-            <div className="fullList">
+            <div className="fullList container">
             {items.map((x => <List item={x.itemTodo} key={x.id} delete={deleteItem} value={x.id}/>
             ))}
             </div>
             <form onSubmit={itemCount}>
             <input type="text" id="userInput" onChange={indivItem} required></input>
             <p>
-            <button type="Submit">Add Item</button>
+            <button type="Submit" className="btn btn-light btn-md">Add Item</button>
             </p>
             </form>
             <span>{count} items on list</span>
