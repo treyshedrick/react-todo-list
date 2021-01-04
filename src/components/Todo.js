@@ -1,10 +1,16 @@
 import List from "./List";
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const Todo= () => {
     const [count, currentCount] = useState(0);
     const [individualItem, newItem] = useState("");
     const [items, itemCounter] = useState([]);
+
+    const inputRef = useRef(null);
+
+    useEffect(()=>{
+        inputRef.current.focus();
+    })
     
     const indivItem = i => {
         newItem(i.target.value);
@@ -30,7 +36,7 @@ const Todo= () => {
             ))}
             </div>
             <form onSubmit={itemCount}>
-            <input type="text" id="userInput" onChange={indivItem} required></input>
+            <input type="text" id="userInput" onChange={indivItem} ref={inputRef} required></input>
             <p>
             <button type="Submit" className="btn btn-light btn-md">Add Item</button>
             </p>
